@@ -4,48 +4,96 @@
     <meta charset="UTF-8">
     <title>Formularzy</title>
     <style>
-    p {
-        text-align: center;
-    }
+    table {
+            width: 30%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            background-color: #7b8f9e;
+            text-align: center;
+            font-weight: 700;
+            color: #000000 ;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+            max-width: 500px; /* Maksymalna szerokość formularza */
+
+        }
+        table caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffffff; 
+        }
+        table, th, td {
+            border: 1px solid #ffffff;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            text-size-adjust: bold;
+        }
+        th {
+            background-color: #ffffff; 
+            color: #004d40;
+        }
+        tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            color: #004d40; 
+        }
+        #buton {
+  background-color: #4CAF50; 
+  padding: 15px 32px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block;
+  font-size: 16px; 
+  border: none; 
+  border-radius: 8px; 
+  cursor: pointer; 
+}
+
+#buton:hover {
+  background-color: #45a049; 
+}  
     body {
         font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 10px;
-        background-color: #F0F8FF;
+        line-height: 2.6;
+        margin: 5px;
+        background-color: #e2e1ff;
     }
-    table {
-            width: 80%;
-            border-collapse: collapse;
-            margin: auto;
-            background-color: #536675;
-    }
+    input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #B0BEC5;
+            box-sizing: border-box;
+            background-color: #CFD8DC;
+        }
         </style>
     
 </head>
 <body>
 <table>
-    <p>Formularzy</p>
+    <h1>Formularzy</h1>
     <tr>
         <form>
            <td> <label for="Imie">
                 Imie
                 </label>
-            </td>
-           
-        </form>           
+            </td>          
     </tr>
     <tr> 
         <td>
         <input type="text" name="Imie" id="Imie">
         </td>
     <tr>
-        <form>
             <td> <label for="Nazwisko">
                 Nazwisko
                 </label>
-            </td>
-           
-        </form>           
+            </td>         
     </tr>
 <tr> 
     <td>
@@ -53,13 +101,10 @@
         </td>  
 </tr>
 <tr>
-    <form>
         <td> <label for="Adres">
             Adres
             </label>
-        </td>
-       
-    </form>           
+        </td>          
 </tr>
 </tr>
 <tr> 
@@ -68,17 +113,13 @@
         </td>  
 </tr>
 <tr>
-    <form>
        <td> <label for="Kraj">
             Wybierz Kraj
             
-        </td>
-       
-    </form>           
+        </td>          
 </tr>
 <tr> 
-    <td>
-        
+    <td>      
     <select name="Kraj" Id="Kraj">
         <option>Polska</option>
         <option>Ukraina</option>
@@ -89,15 +130,12 @@
         <option>Zwierzyniec</option>
         <option>Sochy</option>
     </select>
-</label>
     </td>
 <tr>
     <form>
         <td> <label for="Telefon">
             Telefom
-            </label>
         </td>
-       
     </form>           
 </tr>
 <tr> 
@@ -106,13 +144,10 @@
     </td>  
 </tr>
 <tr>
-<form>
     <td> <label for="E-mail">
         E-mail
         </label>
-    </td>
-   
-</form>           
+    </td>           
 </tr>
 <tr> 
 <td>
@@ -122,19 +157,13 @@
 <tr>
     <td>   <label for="Plec">
         Plec
-        </label>  
-       
-        
-    </td>
-    
+        </label>         
+    </td>  
 </tr>
 <tr>
     <td>
-    <input type="radio" name="Plec" id="Plec">
-    M
-     
-    <input type="radio" name="Plec" id="Plec">
-    K
+    <input type="radio" name="Plec" id="Plec" class="asd"> M
+    <input type="radio" name="Plec" id="Plec" class="asd">K
      </td> 
 </tr>
 <tr>
@@ -144,8 +173,6 @@
             <label for="Regulamin">
             Akceptuję regulamin
             </label>
-
-        </form>
     </td>
 </tr>
 <tr>
@@ -153,7 +180,6 @@
         <button type="submit" Id="buton">Wyślij</button>
     </td>
 </tr>
-
 </table>
 </body>
 </html>
